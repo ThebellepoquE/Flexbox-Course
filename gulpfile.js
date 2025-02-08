@@ -6,8 +6,11 @@ gulp.task('serve', function() {
   browserSync.init({
     server: {
       baseDir: "./"
-    }
+    },
+    port: 3001,
+    open: true,
+    notify: false
   });
 
-  gulp.watch("*.html").on("change", reload);
+gulp.watch("*.html").on("change", reload);
 });
