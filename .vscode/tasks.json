@@ -5,7 +5,11 @@
             "label": "Start Gulp",
             "type": "shell",
             "command": "npx gulp serve",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
