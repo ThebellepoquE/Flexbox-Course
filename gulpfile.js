@@ -6,7 +6,10 @@ gulp.task('serve', function(done) {
 browserSync.init({
   server: {
     baseDir: "./",
-    directory: true  // Añade esta línea para mostrar directorio
+    directory: true,
+    serveStaticOptions: {
+      extensions: ['html']  // Añade esta línea para mostrar directorio
+   }
   },
   port: 3001,
   open: true,
@@ -18,8 +21,3 @@ gulp.watch(['./**/*.html']).on("change", reload);
   done();
 });
 
-function defaultTask(done) {
-    done();
-}
-
-exports.default = defaultTask;
