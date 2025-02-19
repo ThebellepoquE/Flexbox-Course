@@ -8,60 +8,86 @@
     <style>
       body {
         margin: 0;
-        padding: 0;
         font-family: "Open Sans", sans-serif;
       }
 
-      .navbar {
+      .navbar-wrapper {
         display: flex;
+        align-items: center;
+        justify-content: flex-start;
         height: 60px;
         width: 100%;
         border: 2px solid whitesmoke;
-        background-color: hsl(242, 25%, 51%);
+        background-color: hsl(242, 16%, 35%);
         color: white;
       }
 
-      .logo {
+      .navbar-wrapper .logo {
+        display: flex;
+        width: 250px;
+        justify-content: center;
+      }
+
+      .navbar-wrapper .navbar-left {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 300px;
+        height: 60px;
+        background-color: hsl(240, 20%, 21%);
+        color: whitesmoke;
+      }
+
+      .navbar-left .home-link {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 15%;
+        width: 150px;
+        height: 60px;
       }
 
-      .nav-links {
+      .navbar-left .about-link {
         display: flex;
-        width: 30%;
+        justify-content: center;
         align-items: center;
-        justify-content: space-around;
-        cursor: pointer;
-        color: whitesmoke;
-        background-color: hwb(243 16% 70%);
+        width: 150px;
+        height: 60px;
       }
 
-      .link1:hover,
-      .link2:hover,
-      .link3:hover {
+      .navbar-wrapper .navbar-right {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 150px;
+        height: 60px;
+        background-color: hsl(240, 20%, 21%);
+        color: whitesmoke;
+        margin-left: auto;
+      }
+
+      .navbar-left :hover {
+        cursor: pointer;
         background-color: whitesmoke;
-        color: hwb(243 16% 70%);
+        color: hsl(240, 20%, 21%);
+      }
+
+      .navbar-right:hover {
+        cursor: pointer;
+        background-color: whitesmoke;
+        color: hsl(240, 20%, 21%);
       }
     </style>
   </head>
   <body>
-    <div class="navbar">
+    <div class="navbar-wrapper">
       <div class="logo">MyName</div>
 
-      <div class="nav-links">
-        <div class="link1">
-          <p>Link 1</p>
-        </div>
-
-        <div class="link2">
-          <p>Link 2</p>
-        </div>
-
-        <div class="link3">
-          <p>Link 3</p>
-        </div>
+      <div class="navbar-left">
+        <div class="home-link">Home</div>
+        <div class="about-link">About</div>
+      </div>
+      <div class="navbar-right">
+        <div class="contact-link">Contact</div>
       </div>
     </div>
   </body>
